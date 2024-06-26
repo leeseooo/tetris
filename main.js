@@ -14,6 +14,8 @@ const board = new Board();
 
 function play() {
   board.reset();
+  context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+
   const piece = new Piece(context);
   piece.draw();
 
@@ -26,6 +28,7 @@ const moves = {
   [KEY.LEFT]: (pos) => ({ ...pos, x: pos.x - 1 }),
   [KEY.RIGHT]: (pos) => ({ ...pos, x: pos.x + 1 }),
   [KEY.DOWN]: (pos) => ({ ...pos, y: pos.y + 1 }),
+  [KEY.SPACE]: (pos) => ({ ...pos, y: pos.y + 1 }),
 };
 
 document.addEventListener('keydown', (event) => {

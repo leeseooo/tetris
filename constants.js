@@ -6,6 +6,7 @@ const KEY = {
   LEFT: 37,
   RIGHT: 39,
   DOWN: 40,
+  SPACE: 32,
 };
 // make KEY object immutable
 Object.freeze(KEY);
