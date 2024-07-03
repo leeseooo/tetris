@@ -11,7 +11,7 @@ class Board {
   }
 
   valid(piece) {
-    return piece.shape.every((row, dy) => {
+    return piece.shape?.every((row, dy) => {
       return row.every((value, dx) => {
         const x = piece.x + dx;
         const y = piece.y + dy;

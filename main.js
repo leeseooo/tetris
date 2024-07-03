@@ -32,6 +32,9 @@ const moves = {
 };
 
 document.addEventListener('keydown', (event) => {
+  if (!board.piece) {
+    return;
+  }
   if (moves[event.keyCode]) {
     event.preventDefault();
 
