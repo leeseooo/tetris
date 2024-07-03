@@ -31,4 +31,16 @@ class Board {
   aboveFloor(y) {
     return y >= 0 && y < ROWS;
   }
+
+  rotate(p) {
+    const clone = Object.assign({}, p);
+
+    for (let y = 0; y < clone.shape.length; ++y) {
+      for (let x = 0; x < y; ++x) {
+        [clone.shape[x][y], clone.shape[y][x]] = [clone.shape[y][x], clone.shape[x][y]];
+      }
+    }
+    clone.shape.forEach((row) => row.reverse());
+    return clone;
+  }
 }

@@ -28,6 +28,7 @@ const moves = {
   [KEY.LEFT]: (pos) => ({ ...pos, x: pos.x - 1 }),
   [KEY.RIGHT]: (pos) => ({ ...pos, x: pos.x + 1 }),
   [KEY.DOWN]: (pos) => ({ ...pos, y: pos.y + 1 }),
+  [KEY.UP]: (pos) => board.rotate(pos),
   [KEY.SPACE]: (pos) => ({ ...pos, y: pos.y + 1 }),
 };
 
