@@ -35,10 +35,10 @@ document.addEventListener('keydown', (event) => {
   if (!board.piece) {
     return;
   }
-  if (moves[event.keyCode]) {
+  if (moves[event.key]) {
     event.preventDefault();
 
-    const p = moves[event.keyCode](board.piece);
+    const p = moves[event.key](board.piece);
     if (board.valid(p)) {
       board.piece.move(p);
 
